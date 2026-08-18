@@ -1,0 +1,224 @@
+{
+  "foods": [
+    {
+      "id": "1",
+      "name": "Cheeseburger Max",
+      "category": "burger",
+      "price": 45000,
+      "rating": 4.8,
+      "deliveryTime": "20-30 min",
+      "deliveryFee": 12000,
+      "restaurant": "Burger Master",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500"
+    },
+    {
+      "id": "2",
+      "name": "California Roll Set",
+      "category": "sushi",
+      "price": 85000,
+      "rating": 4.9,
+      "deliveryTime": "35-45 min",
+      "deliveryFee": 15000,
+      "restaurant": "Yakuza Sushi",
+      "image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=500"
+    },
+    {
+      "id": "3",
+      "name": "Pepperoni Pitsa 30 sm",
+      "category": "pizza",
+      "price": 68000,
+      "rating": 4.7,
+      "deliveryTime": "25-35 min",
+      "deliveryFee": 10000,
+      "restaurant": "Pizza Bellissimo",
+      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500"
+    },
+    {
+      "id": "4",
+      "name": "Pasta Carbonara",
+      "category": "pasta",
+      "price": 52000,
+      "rating": 4.6,
+      "deliveryTime": "30-40 min",
+      "deliveryFee": 12000,
+      "restaurant": "Italiano Club",
+      "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281288?w=500"
+    },
+    {
+      "id": "5",
+      "name": "Biznes Lunch Set #1",
+      "category": "lunch",
+      "price": 38000,
+      "rating": 4.5,
+      "deliveryTime": "15-25 min",
+      "deliveryFee": 8000,
+      "restaurant": "Express Lunch",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500"
+    },
+    {
+      "id": "6",
+      "name": "Double Bacon Burger",
+      "category": "burger",
+      "price": 58000,
+      "rating": 4.9,
+      "deliveryTime": "25-35 min",
+      "deliveryFee": 12000,
+      "restaurant": "Burger Master",
+      "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=500"
+    },
+    {
+      "id": "7",
+      "name": "Margarita Pitsa",
+      "category": "pizza",
+      "price": 55000,
+      "rating": 4.4,
+      "deliveryTime": "20-30 min",
+      "deliveryFee": 10000,
+      "restaurant": "Pizza Bellissimo",
+      "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=500"
+    },
+    {
+      "id": "8",
+      "name": "Philadelphia Roll",
+      "category": "sushi",
+      "price": 92000,
+      "rating": 5.0,
+      "deliveryTime": "30-40 min",
+      "deliveryFee": 15000,
+      "restaurant": "Yakuza Sushi",
+      "image": "https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=500"
+    },
+    {
+      "id": "9",
+      "name": "Chicken Crispy Burger",
+      "category": "burger",
+      "price": 42000,
+      "rating": 4.6,
+      "deliveryTime": "20-30 min",
+      "deliveryFee": 11000,
+      "restaurant": "Street Food Express",
+      "image": "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=500"
+    },
+    {
+      "id": "10",
+      "name": "Dragon Roll Special",
+      "category": "sushi",
+      "price": 105000,
+      "rating": 4.9,
+      "deliveryTime": "40-50 min",
+      "deliveryFee": 15000,
+      "restaurant": "Yakuza Sushi",
+      "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=500"
+    },
+    {
+      "id": "11",
+      "name": "Quattro Formaggi (4 Pishloq)",
+      "category": "pizza",
+      "price": 75000,
+      "rating": 4.8,
+      "deliveryTime": "30-40 min",
+      "deliveryFee": 10000,
+      "restaurant": "Pizza Bellissimo",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500"
+    },
+    {
+      "id": "12",
+      "name": "Pasta Bolognese",
+      "category": "pasta",
+      "price": 49000,
+      "rating": 4.5,
+      "deliveryTime": "25-35 min",
+      "deliveryFee": 12000,
+      "restaurant": "Italiano Club",
+      "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=500"
+    },
+    {
+      "id": "13",
+      "name": "Aziat Lunch Box",
+      "category": "lunch",
+      "price": 44000,
+      "rating": 4.7,
+      "deliveryTime": "20-30 min",
+      "deliveryFee": 9000,
+      "restaurant": "Express Lunch",
+      "image": "https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?w=500"
+    },
+    {
+      "id": "14",
+      "name": "BBQ BBQ Burger",
+      "category": "burger",
+      "price": 49000,
+      "rating": 4.7,
+      "deliveryTime": "25-35 min",
+      "deliveryFee": 12000,
+      "restaurant": "Burger Master",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=500"
+    },
+    {
+      "id": "15",
+      "name": "Baked Baked Maki Set",
+      "category": "sushi",
+      "price": 78000,
+      "rating": 4.6,
+      "deliveryTime": "35-45 min",
+      "deliveryFee": 14000,
+      "restaurant": "Tokyo Sushi",
+      "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?w=500"
+    },
+    {
+      "id": "16",
+      "name": "Mavsumiy Go'shtli Pitsa",
+      "category": "pizza",
+      "price": 82000,
+      "rating": 4.9,
+      "deliveryTime": "25-35 min",
+      "deliveryFee": 10000,
+      "restaurant": "Pizza Bellissimo",
+      "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=500"
+    },
+    {
+      "id": "17",
+      "name": "Pasta Alfredo Chicken",
+      "category": "pasta",
+      "price": 56000,
+      "rating": 4.8,
+      "deliveryTime": "30-40 min",
+      "deliveryFee": 12000,
+      "restaurant": "Italiano Club",
+      "image": "https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=500"
+    },
+    {
+      "id": "18",
+      "name": "Fitness Light Lunch",
+      "category": "lunch",
+      "price": 35000,
+      "rating": 4.3,
+      "deliveryTime": "15-25 min",
+      "deliveryFee": 8000,
+      "restaurant": "Healthy Food",
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500"
+    },
+    {
+      "id": "19",
+      "name": "Meksikancha Pitsa (Achchiq)",
+      "category": "pizza",
+      "price": 71000,
+      "rating": 4.6,
+      "deliveryTime": "30-40 min",
+      "deliveryFee": 10000,
+      "restaurant": "Pizza Bellissimo",
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500"
+    },
+    {
+      "id": "20",
+      "name": "Mini Combo Lunch",
+      "category": "lunch",
+      "price": 41000,
+      "rating": 4.5,
+      "deliveryTime": "20-30 min",
+      "deliveryFee": 9000,
+      "restaurant": "Express Lunch",
+      "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500"
+    }
+  ]
+}

@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import "./home.css";
+import { useFetch } from "./../../hooks/useFetch";
+import Meal from "./meal";
+import { toast } from "react-toastify";
 
 const Home = () => {
   const [active, setActive] = useState("all");
+
+  const {
+    data: meals,
+    setData,
+    error,
+    loading,
+  } = useFetch("http://localhost:3000/foods"); 
 
   return (
     <div className="home">
@@ -58,6 +68,25 @@ const Home = () => {
               <option value="low-to-high">From cheap to expensive</option>
               <option value="high-to-low">From expensive to cheap</option>
             </select>
+          </div>
+
+          <div className="home-meals">
+            <h2>Popular meals</h2>
+
+            <div className="meals-container">
+              {loading ? <h1 className="loading">Loading...</h1> : ""}
+              {meals.map((val) => {
+                return (
+                  <Meal
+                    name={val.name}
+                    time={val.time}
+                    image={val.image}
+                    rating={val.rating}
+                    price={val.price}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
