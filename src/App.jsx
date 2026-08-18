@@ -11,13 +11,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element : <Asosiy/>
+        element: <Asosiy />,
       },
       {
         path: "/basket",
-        element : "salom"
+        element: "salom",
       }
-    ]
+    ],
   },
 ]);
 

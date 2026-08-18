@@ -1,3 +1,25 @@
 .partner {
     background-color: #1e293b;
 }
+
+.partner-title {
+    padding-top: 50px;
+}
+.partner-title h2 {
+    color: #f8fafc;
+}
+.partners img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.partners {
+    display: grid;
+    padding-top: 20px;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+
+}

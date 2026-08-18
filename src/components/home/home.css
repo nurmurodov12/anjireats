@@ -1,0 +1,83 @@
+.home {
+    background-color: #1e293b;
+    padding-top: 30px;
+}
+
+.home-title h2 {
+    color: #f8fafc;
+    padding-bottom: 19px;
+}
+
+.home-categories {
+    background-color: #0f172a;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.simple {
+    color: #f8fafc;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.simple:hover {
+    background-color: #28417c;
+}
+
+.active {
+    color: #f8fafc;
+    background: none;
+    background-color: #0b1d47;
+    border: none;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.select-wrapper {
+    position: relative;
+    width: 240px;
+}
+
+.custom-select {
+    width: 50%;
+    padding: 12px 16px;
+    background-color: #1e293b;
+    color: #f8fafc;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.custom-select:focus {
+    border-color: #6366f1;
+}
+
+.custom-select option {
+    background-color: #1e293b;
+    color: #f8fafc;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #94a3b8;
+    font-size: 12px;
+}
