@@ -6,15 +6,17 @@ export function useFetch(url) {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
+    const [fakerData, setFakerData] = useState([])
 
     useEffect(() => {
 
         async function dataJson() {
             try {
-                
+
                 setLoading(true)
                 const { data: meals } = await axios.get(url)
                 setData(meals)
+                setFakerData(meals)
                 toast.success("Download successfly")
                 setLoading(false)
             } catch (error) {
@@ -26,5 +28,5 @@ export function useFetch(url) {
 
     }, [])
 
-    return { data, error, loading, setData }
+    return { data, error, loading, setData, fakerData }
 }

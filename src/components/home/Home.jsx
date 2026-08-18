@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
 import { useFetch } from "./../../hooks/useFetch";
 import Meal from "./meal";
@@ -6,67 +6,150 @@ import { toast } from "react-toastify";
 
 const Home = () => {
   const [active, setActive] = useState("all");
+  const [sort, setSort] = useState("");
 
   const {
     data: meals,
     setData,
     error,
     loading,
-  } = useFetch("http://localhost:3000/foods"); 
+    fakerData,
+  } = useFetch("http://localhost:3000/foods");
+
+  function filterForAll() {
+    setActive("all");
+
+    const filteredData = fakerData.filter((val) => {
+      return val.category;
+    });
+
+    setData(filteredData);
+  }
+
+  function filterForBurger() {
+    setActive("burgers");
+
+    const filteredData = fakerData.filter((val) => {
+      return val.category.toLowerCase() === "burger";
+    });
+
+    setData(filteredData);
+  }
+
+  function filterForSushi() {
+    setActive("sushi");
+
+    const filteredData = fakerData.filter((val) => {
+      return val.category.toLowerCase() === "sushi";
+    });
+
+    setData(filteredData);
+  }
+
+  function filterForPizza() {
+    setActive("pizza");
+    const filteredData = fakerData.filter(
+      (val) => val.category.toLowerCase() === "pizza",
+    );
+
+    setData(filteredData);
+  }
+
+  function filterForPasta() {
+    setActive("pasta");
+    const filteredData = fakerData.filter(
+      (val) => val.category.toLowerCase() === "pasta",
+    );
+
+    setData(filteredData);
+  }
+
+  function filterForLunch() {
+    setActive("lunch");
+
+    const filteredData = fakerData.filter((val) => {
+      return val.category.toLowerCase() === "lunch";
+    });
+
+    setData(filteredData);
+  }
+
+  useEffect(() => {
+    if (sort === "cheap") {
+      const sorted = [...meals].sort((a, b) => {
+        return a.price - b.price;
+      });
+      setData(sorted);
+    }
+
+    if (sort === "expensive") {
+      const sorted = [...meals].sort((a, b) => {
+        return b.price - a.price;
+      });
+
+      setData(sorted);
+    }
+
+    if(sort === "default") {
+      setData(fakerData)
+    }
+  }, [sort]);
+
+  console.log(meals);
 
   return (
     <div className="home">
       <div className="container">
         <div className="home-content">
           <div className="home-title">
-            <h2>What to order</h2>
+            <h2>What to orders</h2>
           </div>
 
           <div className="home-categories">
             <button
               className={`${active.toLowerCase() === "all" ? "active" : "simple"}`}
-              onClick={() => setActive("all")}
+              onClick={filterForAll}
             >
               All
             </button>
             <button
               className={`${active.toLowerCase() === "burgers" ? "active" : "simple"}`}
-              onClick={() => setActive("burgers")}
+              onClick={filterForBurger}
             >
               Burgers
             </button>
             <button
               className={`${active.toLowerCase() === "sushi" ? "active" : "simple"}`}
-              onClick={() => setActive("sushi")}
+              onClick={filterForSushi}
             >
               Sushi
             </button>
             <button
               className={`${active.toLowerCase() === "pizza" ? "active" : "simple"}`}
-              onClick={() => setActive("pizza")}
+              onClick={filterForPizza}
             >
               Pizza
             </button>
             <button
               className={`${active.toLowerCase() === "pasta" ? "active" : "simple"}`}
-              onClick={() => setActive("pasta")}
+              onClick={filterForPasta}
             >
               Pasta
             </button>
             <button
               className={`${active.toLowerCase() === "lunch" ? "active" : "simple"}`}
-              onClick={() => setActive("lunch")}
+              onClick={filterForLunch}
             >
               Lunch
             </button>
 
             <select
               className="custom-select"
-              onChange={(e) => onSortChange(e.target.value)}
+              onChange={(e) => setSort(e.target.value)}
             >
               <option value="default">Sort</option>
-              <option value="low-to-high">From cheap to expensive</option>
-              <option value="high-to-low">From expensive to cheap</option>
+              <option value="cheap">From cheap to expensive</option>
+              <option value="expensive">From expensive to cheap</option>
             </select>
           </div>
 
@@ -78,8 +161,9 @@ const Home = () => {
               {meals.map((val) => {
                 return (
                   <Meal
+                    key={val.id}
                     name={val.name}
-                    time={val.time}
+                    deliveryTime={val.deliveryTime}
                     image={val.image}
                     rating={val.rating}
                     price={val.price}
