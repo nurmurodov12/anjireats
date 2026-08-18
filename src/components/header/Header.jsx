@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -8,13 +9,12 @@ const Header = () => {
         <div className="header-content">
           <div className="header-left">
             <h2>
-              Anjir <i class="fa-solid fa-utensils"></i> Eats
+              <Link to={"/"} className="logo">
+                Anjir <i class="fa-solid fa-utensils"></i> Eats
+              </Link>
             </h2>
 
-            <form>
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Find in Eats" />
-            </form>
+           
           </div>
 
           <div className="header-right">

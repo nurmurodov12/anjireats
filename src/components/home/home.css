@@ -1,6 +1,7 @@
 .home {
     background-color: #1e293b;
     padding-top: 30px;
+    padding-bottom: 40px;
 }
 
 .home-title h2 {
@@ -139,4 +140,29 @@
 
 .price {
     padding-top: 4px;
+}
+
+.form-i {
+    color: white;
+    font-size: 20px;
+}
+
+.form-input {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-weight: 600;
+}
+
+.form {
+    width: 390px;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+    border-radius: 23px;
+    padding: 10px;
+    height: 50px;
+    background-color: #0f172a;
 }

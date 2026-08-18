@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext, useRef } from "react";
 import "./home.css";
 import { useFetch } from "./../../hooks/useFetch";
 import Meal from "./meal";
@@ -74,6 +74,28 @@ const Home = () => {
     setData(filteredData);
   }
 
+  const refForSearch = useRef();
+
+  function searchMeals(e) {
+    e.preventDefault();
+
+    const searchedMeal = fakerData.filter((val) => {
+      return val.name
+        .toLowerCase()
+        .includes(refForSearch.current.value.toLowerCase());
+    });
+
+    if (searchedMeal.length !== 0) {
+      toast.success("Found you searched meal");
+    }
+
+    if (searchedMeal.length === 0) {
+      toast.error("Ther's not you searched meal");
+    }
+
+    setData(searchedMeal);
+  }
+
   useEffect(() => {
     if (sort === "cheap") {
       const sorted = [...meals].sort((a, b) => {
@@ -90,8 +112,8 @@ const Home = () => {
       setData(sorted);
     }
 
-    if(sort === "default") {
-      setData(fakerData)
+    if (sort === "default") {
+      setData(fakerData);
     }
   }, [sort]);
 
@@ -152,6 +174,16 @@ const Home = () => {
               <option value="expensive">From expensive to cheap</option>
             </select>
           </div>
+
+          <form className="form" onSubmit={searchMeals}>
+            <i className="fa-solid fa-magnifying-glass form-i"></i>
+            <input
+              ref={refForSearch}
+              type="text"
+              placeholder="Find in Eats "
+              className="form-input"
+            />
+          </form>
 
           <div className="home-meals">
             <h2>Popular meals</h2>

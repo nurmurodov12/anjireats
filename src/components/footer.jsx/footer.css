@@ -1,0 +1,62 @@
+.footer {
+    background-color: #31486e;
+}
+
+.mobile {
+    display: flex;
+    gap: 26px;
+}
+
+.apple,
+.play {
+    display: flex;
+    align-items: center;
+
+    border: #143c7c 2px solid;
+    margin-top: 17px;
+    padding: 8px;
+    border-radius: 10px;
+
+    gap: 9px;
+}
+
+.footer-content {
+    padding: 80px 10px;
+    display: flex;
+    gap: 300px;
+}
+
+.apple,
+p i {
+    color: #f8fafc;
+}
+
+
+.play,
+p i {
+    color: #f8fafc;
+
+}
+
+.footer-top h3,
+.footer-right h3 {
+    font-size: 20px;
+    color: rgb(224, 222, 218);
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-info ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding-top: 40px;
+}
+
+.footer-info ul li {
+    color: rgb(176, 176, 176);
+}
