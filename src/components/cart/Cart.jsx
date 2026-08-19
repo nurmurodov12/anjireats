@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./cart.css";
 import { Context } from "./../../App";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { state, dispatch } = useContext(Context);
@@ -13,10 +14,6 @@ const Cart = () => {
     return acc + val.price;
   }, 0);
   console.log(allSum);
-
-  function clearance() {
-    
-  }
 
   return (
     <div className="cart">
@@ -63,7 +60,16 @@ const Cart = () => {
                 All sum: <span>{allSum}so'm</span>
               </p>
 
-              <button className="clearance" onClick={clearance}>Clearance</button>
+              <Link to={"/end"}>
+                <button
+                  className="clearance"
+                  onClick={() => {
+                    state.cart = [];
+                  }}
+                >
+                  Clearance
+                </button>
+              </Link>
             </div>
           ) : (
             <h1 className="empty">Your cart empty now😕</h1>

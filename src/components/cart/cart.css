@@ -1,5 +1,6 @@
 .cart {
     padding: 150px 10px;
+    
 }
 
 .cart-detail {
@@ -78,6 +79,9 @@
     position: fixed;
     right: 20%;
     top: 40%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    background-color: white;
 }
 
 
@@ -112,4 +116,14 @@
 
 .clearance:active {
     background-color: rgb(203, 198, 198);
+}
+
+.delete {
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.time {
+    height: 10px;
 }

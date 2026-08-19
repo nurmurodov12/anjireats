@@ -19,21 +19,21 @@ const Meal = ({ image, name, price, rating, deliveryTime, id }) => {
     <div className="meal">
       <div className="top">
         <Link className="none-text" to={`meals/${id}`}>
-          <img src={image} alt="" />
+          <img src={image} alt="" className=""/>
         </Link>
       </div>
 
       <div className="bottom">
-        <div className="bottom-left">
+        <div className="bottom-left ">
           <h3>{name}</h3>
-          <p>
+          <p className="time">
             <i class="fa-solid fa-truck-fast"></i>
             {deliveryTime}
           </p>
         </div>
 
-        <div className="bottom-right">
-          <p>
+        <div className="bottom-right ">
+          <p className="">
             <i class="fa-solid fa-star"></i>
             {rating}
           </p>

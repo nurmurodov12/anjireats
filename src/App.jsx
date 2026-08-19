@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import Asosiy from "./components/asosiy/Asosiy";
 import MealDetail from "./components/home/mealDetail";
 import Cart from "./components/cart/Cart";
+import End from "./components/end/End";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "meals/:id",
         element: <MealDetail />,
+      },
+      {
+        path: "/end",
+        element: <End />,
       },
     ],
   },
