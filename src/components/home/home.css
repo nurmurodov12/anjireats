@@ -106,6 +106,29 @@
     height: auto;
 }
 
+.none-text {
+
+    text-decoration: none;
+}
+
+.add-2 {
+    width: 300px;
+    padding: 14px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #8b8c8f;
+    color: #f8fafc;
+    cursor: pointer;
+    transition: .1s ease-in-out all;
+}
+
+
+.add-2:active {
+    background-color: #828284;
+    
+}
+
 .top img {
     width: 100%;
     height: 180px;
@@ -165,4 +188,73 @@
     padding: 10px;
     height: 50px;
     background-color: #0f172a;
+}
+
+/* meal detail */
+
+.meal-detail {
+    padding: 150px 100px;
+}
+
+.top-meal img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-top: 14px;
+}
+
+.bottom-meal {
+    display: flex;
+    gap: 130px;
+    padding-top: 30px;
+}
+
+.delever i {
+    color: black;
+}
+
+.delever {
+    margin-top: 10px;
+}
+
+.name {
+    font-size: 21px;
+    font-weight: 600;
+
+}
+
+.add {
+    width: 410px;
+    margin-top: 40px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .1s ease-in-out all;
+}
+
+.add:active {
+    background-color: #8b8c8f;
+    color: #dbdddf;
+}
+
+.offer {
+    padding: 50px 100px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    color: black;
+}
+
+.text {
+    color: black;
+    font-size: 16px;
+}
+
+.title {
+    padding-left: 90px;
+    letter-spacing: 1px;
 }

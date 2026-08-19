@@ -220,5 +220,67 @@
       "restaurant": "Express Lunch",
       "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500"
     }
+  ],
+  "offers": [
+    {
+      "id": "101",
+      "title": "Super Combo Burger Set",
+      "description": "Burger + Kartoshka Fri + Cola 0.5L",
+      "discount": "20%",
+      "originalPrice": 65000,
+      "discountPrice": 52000,
+      "rating": 4.9,
+      "deliveryTime": "15-25 min",
+      "badge": "Aksiya",
+      "image": "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=500"
+    },
+    {
+      "id": "102",
+      "title": "Mega Sushi Set (24 dona)",
+      "description": "Kalyforniya + Filadelfiya + Baki Roll",
+      "discount": "15%",
+      "originalPrice": 140000,
+      "discountPrice": 119000,
+      "rating": 5.0,
+      "deliveryTime": "30-40 min",
+      "badge": "Top Tavsiya",
+      "image": "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=500"
+    },
+    {
+      "id": "103",
+      "title": "2x Pepperoni Pitsa Kombo",
+      "description": "Ikkita katta Pepperoni pitsa va tekin yetkazib berish",
+      "discount": "25%",
+      "originalPrice": 136000,
+      "discountPrice": 102000,
+      "rating": 4.8,
+      "deliveryTime": "25-35 min",
+      "badge": "Arzon",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500"
+    },
+    {
+      "id": "104",
+      "title": "Biznes Lanch Express",
+      "description": "Sho'rva + Ikkinchi taom + Salat + Choy",
+      "discount": "10%",
+      "originalPrice": 45000,
+      "discountPrice": 40000,
+      "rating": 4.7,
+      "deliveryTime": "15-20 min",
+      "badge": "Issiq",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500"
+    },
+    {
+      "id": "105",
+      "title": "Italiano Pasta Combo",
+      "description": "Carbonara pasta + Tost va Ichimlik",
+      "discount": "18%",
+      "originalPrice": 60000,
+      "discountPrice": 49000,
+      "rating": 4.6,
+      "deliveryTime": "20-30 min",
+      "badge": "Yangi",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500"
+    }
   ]
 }

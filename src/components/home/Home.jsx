@@ -117,8 +117,6 @@ const Home = () => {
     }
   }, [sort]);
 
-  console.log(meals);
-
   return (
     <div className="home">
       <div className="container">
@@ -193,6 +191,7 @@ const Home = () => {
               {meals.map((val) => {
                 return (
                   <Meal
+                    id={val.id}
                     key={val.id}
                     name={val.name}
                     deliveryTime={val.deliveryTime}

@@ -12,7 +12,6 @@ export function useFetch(url) {
 
         async function dataJson() {
             try {
-
                 setLoading(true)
                 const { data: meals } = await axios.get(url)
                 setData(meals)

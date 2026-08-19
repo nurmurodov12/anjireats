@@ -13,13 +13,13 @@ const Header = () => {
                 Anjir <i class="fa-solid fa-utensils"></i> Eats
               </Link>
             </h2>
-
-           
           </div>
 
           <div className="header-right">
             <i class="fa-solid fa-globe"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <Link to={"/cart"}>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </Link>
           </div>
         </div>
       </div>
