@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
+import { Context } from "../../App";
 
 const Header = () => {
+
+  const {state, dispatch} = useContext(Context)
+
   return (
     <div className="header">
       <div className="container">
@@ -17,8 +21,9 @@ const Header = () => {
 
           <div className="header-right">
             <i class="fa-solid fa-globe"></i>
-            <Link to={"/cart"}>
+            <Link to={"/cart"} className="none">
               <i class="fa-solid fa-cart-shopping"></i>
+              <sup className="">{state.cart.length}</sup>
             </Link>
           </div>
         </div>

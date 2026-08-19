@@ -14,6 +14,10 @@ const Cart = () => {
   }, 0);
   console.log(allSum);
 
+  function clearance() {
+    
+  }
+
   return (
     <div className="cart">
       <div className="container">
@@ -59,7 +63,7 @@ const Cart = () => {
                 All sum: <span>{allSum}so'm</span>
               </p>
 
-              <button className="clearance">Clearance</button>
+              <button className="clearance" onClick={clearance}>Clearance</button>
             </div>
           ) : (
             <h1 className="empty">Your cart empty now😕</h1>

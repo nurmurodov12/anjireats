@@ -16,7 +16,6 @@ export function useFetch(url) {
                 const { data: meals } = await axios.get(url)
                 setData(meals)
                 setFakerData(meals)
-                toast.success("Download successfly")
                 setLoading(false)
             } catch (error) {
                 toast.error("Something error or you internter is not good")

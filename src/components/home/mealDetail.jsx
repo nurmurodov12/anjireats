@@ -1,12 +1,15 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
+import { Context } from "./../../App";
 
 const MealDetail = () => {
   const param = useParams();
 
   const [data, setData] = useState([]);
+
+  const { state, dispatch } = useContext(Context);
 
   useEffect((val) => {
     const dataJson = async () => {
@@ -26,11 +29,19 @@ const MealDetail = () => {
     loading,
   } = useFetch("http://localhost:3000/offers");
 
-  // const offers = meals[0].offers
   const offers = meals;
-  console.log(meals);
-
   console.log(offers);
+
+  const forCartObj = {
+    image: data.image,
+    name: data.name,
+    price: data.price,
+    rating: data.rating,
+    deliveryTime: data.deliveryTime,
+    id: data.id,
+  };
+
+  console.log(forCartObj);
 
   return (
     <div className="">
@@ -57,7 +68,9 @@ const MealDetail = () => {
           </div>
         </div>
 
-        <button className="add">Add cart</button>
+        <button className="add" onClick={() => dispatch(forCartObj)}>
+          Add cart
+        </button>
       </div>
 
       <h1 className="title">Offers</h1>

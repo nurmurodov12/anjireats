@@ -28,9 +28,10 @@
     text-decoration: none;
 }
 
-
-
-
+.none {
+    text-decoration: none;
+    color: white;
+}
 
 .header-right {
     display: flex;
