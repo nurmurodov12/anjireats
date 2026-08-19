@@ -30,7 +30,20 @@ const router = createBrowserRouter([
 export const Context = createContext("");
 const App = () => {
   const initialState = {
-    cart: [],
+    cart: [
+      {
+        id: "1",
+        name: "Cheeseburger Max",
+        category: "burger",
+        price: 45000,
+        rating: 4.8,
+        deliveryTime: "20-30 min",
+        deliveryFee: 12000,
+        restaurant: "Burger Master",
+        image:
+          "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500",
+      },
+    ],
   };
 
   function reduce(now, action) {
@@ -38,7 +51,7 @@ const App = () => {
   }
 
   const [state, dispatch] = useReducer(reduce, initialState);
-  
+
   return (
     <div>
       <Context.Provider value={{ state, dispatch }}>
