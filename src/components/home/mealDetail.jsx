@@ -30,7 +30,6 @@ const MealDetail = () => {
   } = useFetch("http://localhost:3000/offers");
 
   const offers = meals;
-  console.log(offers);
 
   const forCartObj = {
     image: data.image,
@@ -40,8 +39,6 @@ const MealDetail = () => {
     deliveryTime: data.deliveryTime,
     id: data.id,
   };
-
-  console.log(forCartObj);
 
   return (
     <div className="">
@@ -77,7 +74,7 @@ const MealDetail = () => {
       <div className="offer">
         {offers?.map((item) => {
           return (
-            <div className="meal">
+            <div key={item.id} className="meal">
               <div className="top">
                 <img src={item.image} alt="" />
               </div>

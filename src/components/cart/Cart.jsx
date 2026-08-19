@@ -6,14 +6,12 @@ import { Link } from "react-router-dom";
 const Cart = () => {
   const { state, dispatch } = useContext(Context);
 
-  console.log(state);
 
   const [counter, setCounter] = useState(1);
 
   const allSum = state.cart.reduce((acc, val) => {
     return acc + val.price;
   }, 0);
-  console.log(allSum);
 
   return (
     <div className="cart">
